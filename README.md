@@ -124,7 +124,7 @@ Now, we will create an EKS (Elastic Kubernetes Service) cluster using eksctl.
 Create the cluster:
 
 ```
-eksctl create cluster --name my-cluster --version 1.24 --region us-east-1 --nodegroup-name linux-nodes --node-type t2.medium --nodes 3 --nodes-min 1 --nodes-max 4 --managed
+eksctl create cluster --name dob-profile-cluster --version 1.24 --region us-east-1 --nodegroup-name linux-nodes --node-type t2.medium --nodes 3 --nodes-min 1 --nodes-max 4 --managed
 ```
 
 Note: If you encounter a version error, refer to the ![AWS EKS Kubernetes Versions](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html) for supported versions.
@@ -217,18 +217,19 @@ git push -u origin main
 
 When you're done with your project, it's important to clean up your resources to avoid unnecessary charges.
 
-Delete the EKS cluster:
+1. Delete the EKS cluster:
 
 ```
 eksctl delete cluster --name my-cluster --region us-east-1
-
-Destroy the Terraform-managed infrastructure:
-
-Navigate to your Terraform project directory:
-
 ```
-cd path/to/terraform-project
-```
+
+2. Destroy the Terraform-managed infrastructure:
+
+    - Navigate to your Terraform project directory:
+
+      ```
+       cd path/to/terraform-project
+      ```
 
 Run the destroy command:
 
