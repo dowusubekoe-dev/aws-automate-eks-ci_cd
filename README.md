@@ -244,6 +244,3 @@ rm -rf .terraform
 rm terraform.tfstate
 rm terraform.tfstate.backup
 ```
-
-## Conclusion
-Congratulations! You have successfully set up a scalable and highly available infrastructure using Terraform and Kubernetes on AWS. You also learned how to deploy a sample application and push your project to GitHub. Remember to clean up your resources to avoid unnecessary charges. Keep experimenting and exploring the world of cloud computing and automation!
